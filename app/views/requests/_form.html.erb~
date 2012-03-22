@@ -1,0 +1,22 @@
+<% form_for @request do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :"Leave Date" %><br />
+    <%= f.date_select :leavedate %>
+  </p>
+  <p>
+    <%= f.label :"Return Date" %><br />
+    <%= f.date_select :returndate %>
+  </p>
+  <p>
+    <%= f.label :"Total" %><br />
+    <%= f.text_field :total %>
+  </p>
+    <% if current_user.admin == true %>
+  <p>
+    <%= f.label :"Authorised" %><br />
+    <%= f.check_box :authorised %>
+  </p>
+  <% end %>
+  <p><%= f.submit %></p>
+<% end %>

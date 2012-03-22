@@ -1,0 +1,12 @@
+Welcome To The LJMU Holiday Requests System
+
+This system allows the user to add, edit, view or delete holiday requests they have created
+
+Users & Passwords
+enrlstro : mobile
+enrmlee : enrmlee
+enrlrob : enrlrob
+jpfinlay : jpfin
+admin : admin
+
+The admin is allowed to view, authorise and delete records created by other users but not allowed to create new requests

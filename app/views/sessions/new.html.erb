@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<% title "LJMU Holiday Requests Login" %>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="Banner">
+  <p><img src="./Images/LJMU_LOGO.gif" width="90" height="90" alt="LJMU Logo"></p>
+  <p><img src="./Images/LJMU_Text.gif" width="508" height="37" alt="LJMU Text"></p>
+</div>
+
+<h1>Staff Holiday Requests</h1>
+
+<% form_tag sessions_path do %>
+  <p>
+    <%= label_tag :login, "Username or Email Address" %><br />
+    <%= text_field_tag :login, params[:login] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p><%= submit_tag "Log in" %></p>
+<% end %>
+<p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
+
+  <div id="links"><a href="http://twitter.com/#!/LJMU" accesskey="t"><img src="./Images/Twitter_Icon.gif" width="41" height="45" border="0" alt="Twitter Link"></a>
+  <a href="http://www.facebook.com/liverpooljohnmooresuniversity" accesskey="f"><img src="./Images/Facebook_Icon.gif" width="43" height="45" border="0" alt="Facebook Link"></a></div> 
+
+<p>Find us on social networks!</p>
+<p>Want more <abbr title='Information'>info</abbr>? Call us on 0151 231 2121</p>
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!"></a>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  </p>
+      
+</body>
+
+</html>
+
+
+
+

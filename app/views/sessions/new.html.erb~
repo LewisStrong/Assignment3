@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<% title "LJMU Holiday Requests Login" %>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="Banner">
+  <p><img src="./Images/LJMU_LOGO.gif" width="90" height="90" alt="LJMU Logo"></p>
+  <p><img src="./Images/LJMU_Text.gif" width="508" height="37" alt="LJMU Text"></p>
+</div>
+
+<h1>Staff Holiday Requests</h1>
+
+<h2><a href="Index.html" accesskey="h" style="text-decoration: none; border-bottom: 2px solid #15397F ; color:#15397F">Homepage</a>
+ | <a href="RequestIndex.html" accesskey="i" style="text-decoration: none; border-bottom: 0px solid #15397F; color:#15397F">Index</a
+> | <a href="Show.html" accesskey="s" style="text-decoration: none; border-bottom: 0px solid #15397F; color:#15397F">Show</a>
+ | <a href="Edit.html" accesskey="e" style="text-decoration: none; border-bottom: 0px solid #999999; color:#15397F">Edit</a>
+ | <a href="New.html" accesskey="n" style="text-decoration: none; border-bottom: 0px solid #15397F; color:#15397F">New</a></h2>
+
+  <p><img src="./Images/Holiday.jpg" width="335" height="295" alt="Holiday Picture"></p>
+<form action="#">
+    <p>
+      <label for="username">Username</label><br>
+      <input type="text" name="username" id="username" style="text-align: center;" accesskey="u">
+      <br>
+      <label for="password">Password</label><br>
+      <input type="password" name="password" id="password" style="text-align: center;" accesskey="p">
+      <br>
+      <input type="submit" value="Login" accesskey="a">
+    </p>
+</form>
+
+  <div id="links"><a href="http://twitter.com/#!/LJMU" accesskey="t"><img src="./Images/Twitter_Icon.gif" width="41" height="45" border="0" alt="Twitter Link"></a>
+  <a href="http://www.facebook.com/liverpooljohnmooresuniversity" accesskey="f"><img src="./Images/Facebook_Icon.gif" width="43" height="45" border="0" alt="Facebook Link"></a></div> 
+
+<p>Find us on social networks!</p>
+<p>Want more <abbr title='Information'>info</abbr>? Call us on 0151 231 2121</p>
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!"></a>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  </p>
+      
+</body>
+
+</html>
+
+<p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
+
+<% form_tag sessions_path do %>
+  <p>
+    <%= label_tag :login, "Username or Email Address" %><br />
+    <%= text_field_tag :login, params[:login] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p><%= submit_tag "Log in" %></p>
+<% end %>
