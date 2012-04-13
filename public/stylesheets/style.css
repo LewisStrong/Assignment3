@@ -74,6 +74,12 @@ th
 	text-align:center;
 	margin:0 auto
 }
+#pagination_container
+{
+width: 968px;
+overflow: hidden;
+margin: 0 auto;
+}
 .digg_pagination
 {
   background: #D0DC66;

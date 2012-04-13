@@ -7,13 +7,14 @@ class RequestsController < ApplicationController
     else
       @requests = @current_user.requests
     end
-      respond_to do |format|
-      format.html
-      format.xml { render :xml => @requests }
-      format.atom
-      @requests = @requests.paginate(:page => params[:page], :per_page => 5)
-    end
+    respond_to do |format|
+    format.html
+    format.xml { render :xml => @requests }
+    format.atom
+    @requests = Request.all.paginate(:page => params[:page], :per_page => 5)
+
   end
+end
 
   def show
     @request = Request.find(params[:id])

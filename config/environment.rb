@@ -12,7 +12,10 @@ Rails::Initializer.run do |config|
  
   config.time_zone = 'UTC'
 
+  config.gem 'paperclip', :version => '~> 2.3.11'
+
   require 'will_paginate'
+  require 'paperclip'
 
 end
 
